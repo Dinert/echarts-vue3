@@ -1,6 +1,6 @@
-import DChart from './src/index.vue'
-DChart.install = (Vue) => {
-  Vue.component(DChart.name, DChart)
+import DEchart from './src/index.vue'
+DEchart.install = (Vue) => {
+  Vue.component(DEchart.name, DEchart)
 }
 
-export default DChart
+export default DEchart

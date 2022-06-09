@@ -23,7 +23,7 @@
 
 <body>
   <div id="app">
-    <d-chart :chartData="chartData" @config-callback="configCallback"></d-chart>
+    <d-echart :chartData="chartData" @config-callback="configCallback"></d-echart>
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@3.2.36/dist/vue.global.js"></script>
@@ -57,7 +57,7 @@
       }
     },
     components: {
-      'DChart': window['dinert-echarts-vue3'].DChart
+      'DEchart': window['dinert-echarts-vue3'].DEchart
     },
     methods: {
       configCallback() {

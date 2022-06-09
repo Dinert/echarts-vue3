@@ -1,11 +1,11 @@
 
-import DChart from '../packages/chart/index.js'
+import DEchart from '../packages/chart/index.js'
 function install(Vue) {
-  Vue.component(DChart.name, DChart)
+  Vue.component(DEchart.name, DEchart)
 }
 
 export {
-  DChart
+  DEchart
 }
 
 
