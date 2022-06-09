@@ -1,7 +1,8 @@
 {
   "name": "@dinert/echarts-vue3",
-  "version": "0.0.1",
-  "main": "index.js",
+  "version": "0.0.2",
+  "main": "dist/lib-umd.js",
+  "module": "dist/lib-es.js",
   "license": "MIT",
   "scripts": {
     "build": "rollup --config rollup.config.build.js",
