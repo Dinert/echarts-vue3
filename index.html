@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vue3 + echarts</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body,
+    #app {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <d-chart :chartData="chartData" @config-callback="configCallback"></d-chart>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@3.2.36/dist/vue.global.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<script src="./dist/lib-umd.js"></script>
+
+<script>
+  const { createApp } = Vue;
+  const app = createApp({
+    data() {
+      return {
+        chartData: {
+          xAxis: [
+            {
+              type: "category",
+              data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+            },
+          ],
+          yAxis: [
+            {
+              type: "value",
+            },
+          ],
+          series: [
+            {
+              data: [150, 230, 224, 218, 135, 147, 260],
+              type: "line",
+            },
+          ],
+        }
+      }
+    },
+    components: {
+      'DChart': window['dinert-echarts-vue3'].DChart
+    },
+    methods: {
+      configCallback() {
+      }
+    }
+  })
+  app.mount("#app");
+</script>
+
+</html>
